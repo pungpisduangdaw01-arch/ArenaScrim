@@ -1,0 +1,81 @@
+.team-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.team-info-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.team-badge {
+    display: inline-block;
+    background-color: var(--neon-cyan);
+    color: #000000;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-left: 8px;
+}
+
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.member-table th {
+    background-color: #090A0F;
+    color: var(--text-muted);
+    text-align: left;
+    padding: 12px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.member-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.role-badge {
+    background-color: rgba(0, 229, 255, 0.1);
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.social-link-item i {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.social-link-item.discord { color: #5865F2; }
+.social-link-item.facebook { color: #1877F2; }
+.social-link-item.line { color: #00B900; }

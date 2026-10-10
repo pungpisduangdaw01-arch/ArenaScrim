@@ -1,0 +1,102 @@
+.scrim-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.scrim-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.scrim-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    position: relative;
+}
+
+.scrim-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--neon-cyan);
+}
+
+.scrim-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.team-name-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.scrim-status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.scrim-status-badge.open {
+    background-color: rgba(0, 229, 255, 0.15);
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+}
+
+.scrim-status-badge.matched {
+    background-color: rgba(148, 163, 184, 0.15);
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+}
+
+.scrim-detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.scrim-detail-val {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.contact-btn-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.btn-contact {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.btn-contact:hover { opacity: 0.85; }
+.btn-discord { background-color: #5865F2; color: #fff; }
+.btn-facebook { background-color: #1877F2; color: #fff; }
+.btn-line { background-color: #00B900; color: #fff; }
+.scrim-status-badge.expired {
+    background-color: rgba(148, 163, 184, 0.1);
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+}

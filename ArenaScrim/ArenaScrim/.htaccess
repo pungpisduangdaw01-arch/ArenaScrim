@@ -1,0 +1,21 @@
+# ปิดการแสดงรายชื่อไฟล์ในโฟลเดอร์ (เช่น docs/, vendor/)
+Options -Indexes
+
+# ไฟล์เอกสาร/การตั้งค่าที่ไม่ต้องให้เปิดผ่านเว็บ
+<FilesMatch "\.(md|lock|json|docx)$">
+    Require all denied
+</FilesMatch>
+
+# ตั้งค่า Cookie ของ Session ให้ปลอดภัยขึ้น (JavaScript อ่านไม่ได้ / ไม่ส่งไปกับคำขอจากเว็บอื่น)
+<IfModule php_module>
+    php_flag  session.cookie_httponly On
+    php_value session.cookie_samesite Lax
+    php_flag  session.use_strict_mode On
+</IfModule>
+
+# Security headers พื้นฐาน
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
